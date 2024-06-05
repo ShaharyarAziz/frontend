@@ -18,23 +18,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Full Stack Project</h1>
-        <div>{movies.length}</div>
-        {
-          movies.map((movies) => {
-            <div key={movies.id}>
-              <h1>{movies.name}</h1>
-              <p>{movies.year}</p>
-              <p>{movies.rating}</p>
-              <h1>{movies.image}</h1>
-              <h1>{movies.description}</h1>
-            </div>
-
-          })
-        }
+        <h1>Test Project</h1>
+        <p>MOVIES: {movies.length}</p>
+        {movies.map((movies) => (
+          <div key={movies.id}>
+            <h3>Name: {movies.name}</h3>
+            <p>Year: {movies.year}</p>
+            <p>Rating: {movies.rating}</p>
+            <p>Description: {movies.description}</p>
+          </div>
+        ))}
       </header>
     </div>
-  );
+  )
 }
 
 export default App;
